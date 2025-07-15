@@ -1,8 +1,8 @@
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
-pub fn say(s: &str) -> String {
-  println!("The Rust function say() received {}", s);
-  let r = String::from("hello ");
-  return r + s;
+pub fn reverse_string(s: &str) -> String {
+    println!("The Rust function reverse_string() received: {}", s);
+    let reversed: String = s.chars().rev().collect();
+    reversed
 }
